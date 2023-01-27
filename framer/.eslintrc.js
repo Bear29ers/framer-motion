@@ -7,6 +7,7 @@ module.exports = {
     es2021: true,
   },
   extends: [
+    'airbnb',
     'airbnb-typescript',
     'airbnb/hooks',
     'plugin:@typescript-eslint/recommended',
@@ -23,7 +24,7 @@ module.exports = {
     ecmaVersion: 'latest',
     sourceType: 'module',
     tsconfigRootDir: __dirname,
-    project: ['./tsconfig.json'],
+    project: './tsconfig.json',
   },
   plugins: ['react', '@typescript-eslint'],
   rules: {
@@ -67,7 +68,9 @@ module.exports = {
     '@typescript-eslint/no-unsafe-call': 'warn',
     '@typescript-eslint/no-unsafe-member-access': 'warn',
     'import/no-cycle': 'off',
+    'import/prefer-default-export': 'off',
     'react/no-array-index-key': 'off',
     'react/no-unknown-property': 'off',
+    'react/display-name': 'off',
   },
 };
