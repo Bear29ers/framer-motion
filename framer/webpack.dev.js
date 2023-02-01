@@ -11,8 +11,8 @@ module.exports = merge(commonConf({ outputFile, assetFile }), {
   devServer: {
     open: true,
     static: path.join(__dirname, 'dist'),
-    host: '0.0.0.0',
     port: 3000,
+    host: '0.0.0.0',
     hot: true,
     client: {
       overlay: {
@@ -22,13 +22,12 @@ module.exports = merge(commonConf({ outputFile, assetFile }), {
     },
   },
   watchOptions: {
-    ignored: /node_modules/,
+    aggregateTimeout: 200,
     poll: 1000,
   },
   plugins: [
     new HtmlWebpackPlugin({
       template: './src/index.html',
-      favicon: './src/images/favicon.ico',
       inject: 'body',
     }),
   ],

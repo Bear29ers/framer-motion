@@ -7,7 +7,7 @@ const outputFile = '[name].[chunkhash]';
 const assetFile = '[name].[contenthash]';
 
 module.exports = merge(commonConf({ outputFile, assetFile }), {
-  mode: 'development',
+  mode: 'production',
   plugins: [
     new HtmlWebpackPlugin({
       template: './src/index.html',

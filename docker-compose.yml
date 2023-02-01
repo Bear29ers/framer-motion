@@ -6,7 +6,9 @@ services:
       dockerfile: Dockerfile
     tty: true
     volumes:
-      - ./framer:/app/framer
+      - type: bind
+        source: "./framer"
+        target: "/app/framer"
     ports:
       - "8000:3000"
     environment:

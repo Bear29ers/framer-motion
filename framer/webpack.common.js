@@ -1,15 +1,15 @@
 const path = require('path');
 const StylelintPlugin = require('stylelint-webpack-plugin');
-const EslintWebpackPluign = require('eslint-webpack-plugin');
+const EslintWebpackPlugin = require('eslint-webpack-plugin');
 
 module.exports = ({ outputFile, assetFile }) => ({
   entry: './src/index.tsx',
   output: {
     path: path.join(__dirname, 'dist'),
-    filename: `${outputFile}`,
-    chunkFilename: `#${outputFile}`,
+    filename: `${outputFile}.js`,
+    chunkFilename: `#${outputFile}.js`,
   },
-  moudle: {
+  module: {
     rules: [
       {
         test: /\.(ts|tsx)$/,
@@ -44,7 +44,7 @@ module.exports = ({ outputFile, assetFile }) => ({
     new StylelintPlugin({
       fix: true,
     }),
-    new EslintWebpackPluign({
+    new EslintWebpackPlugin({
       extensions: ['js', 'jsx', 'ts', 'tsx'],
       fix: true,
     }),
@@ -65,6 +65,6 @@ module.exports = ({ outputFile, assetFile }) => ({
   },
   resolve: {
     extensions: ['.ts', '.tsx', '.js', '.jsx', '.json'],
-    moudles: [path.resolve(__dirname, 'src'), 'node_modules'],
+    modules: [path.resolve(__dirname, 'src'), 'node_modules'],
   },
 });
