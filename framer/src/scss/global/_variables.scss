@@ -1,0 +1,22 @@
+// Google Fonts
+@import "https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;700&display=swap";
+
+// Variables
+// Colors
+$colors: (
+  main-text: #20242c,
+  top-bg: #fcfcfc,
+  box-shadow: #777,
+  top-list: #81c2fa,
+);
+
+// Fonts
+$roboto: "Roboto Condensed", sans-serif;
+
+// Break Points
+$breakpoints: (
+  xl: "screen and (max-width: 1279px)",
+  lg: "screen and (max-width: 1023px)",
+  md: "screen and (max-width: 767px)",
+  sm: "screen and (max-width: 639px)",
+);
