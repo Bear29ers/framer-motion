@@ -15,6 +15,7 @@
   "dependencies": {
     "@types/react": "^18.0.27",
     "@types/react-dom": "^18.0.10",
+    "framer-motion": "^9.0.0",
     "install-peerdeps": "^3.0.3",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",

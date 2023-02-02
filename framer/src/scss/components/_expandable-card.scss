@@ -1,0 +1,22 @@
+.expandable {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(to right, #2c5364, #203a43);
+
+  &-card {
+    padding: 3rem 5rem;
+    background: white;
+
+    p {
+      padding-top: 1rem;
+      line-height: 150%;
+    }
+
+    &-content {
+      width: 35rem;
+    }
+  }
+}
