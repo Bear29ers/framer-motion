@@ -10,11 +10,15 @@ module.exports = merge(commonConf({ outputFile, assetFile }), {
   devtool: 'source-map',
   devServer: {
     open: true,
-    static: path.join(__dirname, 'dist'),
-    port: 3000,
+    static: {
+      directory: path.join(__dirname, 'dist'),
+    },
     host: '0.0.0.0',
+    allowedHosts: 'all',
     hot: true,
+    port: 8080,
     client: {
+      reconnect: true,
       overlay: {
         errors: true,
         warnings: false,
@@ -22,8 +26,7 @@ module.exports = merge(commonConf({ outputFile, assetFile }), {
     },
   },
   watchOptions: {
-    aggregateTimeout: 200,
-    poll: 1000,
+    poll: true,
   },
   plugins: [
     new HtmlWebpackPlugin({
