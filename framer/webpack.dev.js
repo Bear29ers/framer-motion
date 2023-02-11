@@ -17,6 +17,7 @@ module.exports = merge(commonConf({ outputFile, assetFile }), {
     allowedHosts: 'all',
     hot: true,
     port: 8080,
+    historyApiFallback: true,
     client: {
       reconnect: true,
       overlay: {
