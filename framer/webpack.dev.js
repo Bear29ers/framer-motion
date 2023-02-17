@@ -16,9 +16,10 @@ module.exports = merge(commonConf({ outputFile, assetFile }), {
     host: '0.0.0.0',
     allowedHosts: 'all',
     hot: true,
-    port: 8080,
+    port: 3002,
     historyApiFallback: true,
     client: {
+      webSocketURL: 'ws://0.0.0.0:3002/ws',
       reconnect: true,
       overlay: {
         errors: true,
