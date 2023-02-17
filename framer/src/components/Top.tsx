@@ -15,6 +15,9 @@ export const Top: FC = () => {
           <li>
             <Link to='/expandable-card'>Expandable Card</Link>
           </li>
+          <li>
+            <Link to='/smooth-slider'>Smooth Slider</Link>
+          </li>
         </ul>
       </div>
     </div>

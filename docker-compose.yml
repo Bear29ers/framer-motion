@@ -6,11 +6,15 @@ services:
       dockerfile: Dockerfile
     tty: true
     volumes:
-      - type: bind
-        source: "./framer"
-        target: "/app/framer"
+      - ./framer:/app/framer
+      - /framer/node_modules
+    expose:
+      - 3002
     ports:
-      - "8000:3000"
+      - "3002:3002"
     environment:
       - WATCHPACK_POLLING=true
+      - WDS_SOCKET_HOST=127.0.0.1
+      - WDS_SOCKET_PORT=3002
     stdin_open: true
+    restart: unless-stopped
